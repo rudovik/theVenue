@@ -13,8 +13,6 @@ const Carousel = () => {
     speed: 500,
   }
 
-  console.log(slide_one)
-
   return (
     <div className='carousel_wrapper'>
       <Slider {...settings}>
