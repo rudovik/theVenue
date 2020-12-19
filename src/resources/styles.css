@@ -72,6 +72,7 @@ footer .footer_copyright {
 ======================*/
 
 .carousel_wrapper {
+  height: 100vh;
   overflow: hidden;
 }
 

@@ -16,12 +16,7 @@ const Carousel = () => {
   console.log(slide_one)
 
   return (
-    <div
-      className='carousel_wrapper'
-      style={{
-        background: 'red',
-      }}
-    >
+    <div className='carousel_wrapper'>
       <Slider {...settings}>
         <div>
           <div
