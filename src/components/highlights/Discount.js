@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Fade from 'react-reveal/Fade'
 import Slide from 'react-reveal/Slide'
 
+import MyButton from '../UI/MyButton'
+
 const Discount = () => {
   const [discountStart, setDiscountStart] = useState(0)
   const discountEnd = 30
@@ -34,7 +36,12 @@ const Discount = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
               aliquam qui veritatis quasi, sunt doloremque consectetur fuga.
             </p>
-            <div>button</div>
+            <MyButton
+              text='Purchase tickets'
+              bck='#ffa800'
+              color='#ffffff'
+              link='http://google.com'
+            />
           </div>
         </Slide>
       </div>
