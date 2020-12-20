@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button'
 import ticketIcon from '../../resources/images/icons/ticket.png'
 
 const MyButton = ({ bck, link, color, text }) => {
-  console.log(bck)
   return (
     <Button
       href={link}

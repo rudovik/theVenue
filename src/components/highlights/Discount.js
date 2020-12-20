@@ -7,22 +7,26 @@ import MyButton from '../UI/MyButton'
 const Discount = () => {
   const [discountStart, setDiscountStart] = useState(0)
   const discountEnd = 30
-
-  const percentage = () => {
-    if (discountStart < discountEnd) {
-      setDiscountStart(discountStart + 1)
-    }
-  }
+  const [isRevealed, setIsRevealed] = useState(false)
 
   useEffect(() => {
-    setTimeout(percentage, 30)
-    // eslint-disable-next-line
-  }, [discountStart])
+    if (isRevealed) {
+      setTimeout(() => {
+        if (discountStart < discountEnd) {
+          setDiscountStart(discountStart + 1)
+        }
+      }, 30)
+    }
+  }, [discountStart, isRevealed])
 
   return (
     <div className='center_wrapper'>
       <div className='discount_wrapper'>
-        <Fade onReveal={() => percentage()}>
+        <Fade
+          onReveal={() => {
+            setIsRevealed(true)
+          }}
+        >
           <div className='discount_percentage'>
             <span>{discountStart}%</span>
             <span>OFF</span>
