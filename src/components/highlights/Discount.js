@@ -4,17 +4,16 @@ import Slide from 'react-reveal/Slide'
 
 import MyButton from '../UI/MyButton'
 
+const discountEnd = 30
+
 const Discount = () => {
   const [discountStart, setDiscountStart] = useState(0)
-  const discountEnd = 30
   const [isRevealed, setIsRevealed] = useState(false)
 
   useEffect(() => {
-    if (isRevealed) {
+    if (isRevealed && discountStart < discountEnd) {
       setTimeout(() => {
-        if (discountStart < discountEnd) {
-          setDiscountStart(discountStart + 1)
-        }
+        setDiscountStart(discountStart + 1)
       }, 30)
     }
   }, [discountStart, isRevealed])
